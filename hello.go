@@ -7,60 +7,55 @@ import (
 
 func main(){
 
-	// Variables and Constants
-	// string, int, float32, bool
+	// Arrays
+	var firstNames = [3] string {"John", "April", "Wes"}
+	fmt.Println(firstNames[1])
 
-	//var firstName string = "John"
+	// Infer length
+	var nummies = [] int {1,2,3,4,5}
+	fmt.Println(nummies[0])
 
-	// := shorthand variables
+	// shorthand
+	lastNames := [2] string {"Elder", "Smith"}
+	fmt.Println(lastNames[0])
 
-	//lastName := "Elder"
-	// age := 41
+	// shorthand with inferred
+	ourNames := [] string {"Elder", "Browne"}
+	fmt.Println(ourNames)
 
-	// Create but don't assign
+	// Change item in array
+	ourNames[1] = "Smith"
+	fmt.Println(ourNames)
 
-	var fullName string
-	var age int
-	var price float32
-	var tf bool
+	// Default Assignment 
+	var ourNummies = [5] int {1,2}
+	fmt.Println(ourNummies)
 
-	fmt.Println(fullName, age, price, tf)
+	// Assign in certain positions
+	var moreNummies = [10] int {0:41, 4:99}
+	fmt.Println(moreNummies)
 
+	// Slices
+	var toppings = [5] string {"Pepperoni", "Onion", "Cheese", "Supreme", "Bacon"}
+	fmt.Println(toppings)
 
-	fullName = "John Elder"
-	age = 44
-	price = 19.99
-	tf = true
+	toppingSlice := toppings[0:2]
+	fmt.Println(toppingSlice)
 
-	fmt.Println(fullName, age, price, tf)
+	// modify a slice
+	toppingSlice[1] = "Peppers"
+	fmt.Println(toppingSlice)
 
-	// Multiple variable declaration
+	// Add item to slice
+	toppingSlice = append(toppingSlice, "Apple")
+	fmt.Println(toppingSlice)
 
-	var name1, name2 string = "Tim", "Mary"
-	fmt.Println(name1, name2)
+	// add two slices together
+	otherSlice := toppings[3:4]
+	fmt.Println(otherSlice)
 
-	name1 = "Fred"
-	fmt.Println(name1, name2)
+	otherSlice = append(otherSlice, toppingSlice...)
+	fmt.Println(otherSlice)
 
-	
-	// Constants
-	const PIZZA string = "Pepperoni"
-	fmt.Println(PIZZA)
-
-	//PIZZA = "Cheese"
-	//fmt.Println(PIZZA)
-
-	// Multiple Constants
-
-	const (
-		PIZZA1 = "Peperoni"
-		PIZZA2 = "Cheese"
-		MYNUM = 77
-	)
-
-	fmt.Println(PIZZA2)
-
-
-	// fmt.Println(firstName)
 
 }
