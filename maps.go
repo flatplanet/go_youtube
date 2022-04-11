@@ -18,7 +18,7 @@ func main(){
 	fmt.Println(pizza["John"])
 
 	// Shorthand
-	// toppings := map[string]strin{"John":"Pepperoni"}
+	// toppings := map[string]string{"John":"Pepperoni"}
 
 	// Change an Item
 	pizza["John"] = "Peppers"
